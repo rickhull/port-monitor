@@ -6,12 +6,14 @@ class PortMonitor
     time.strftime('%Y-%m-%d %H:%M:%S')
   end
 
-  attr_reader :host, :port
-  attr_accessor :delay
-
+  # friendly helper
+  #
   def self.status(host, port)
     PortMonitor.new(host, port).status
   end
+
+  attr_reader :host, :port
+  attr_accessor :delay
 
   def initialize(host, port, delay = 1)
     @host = host
