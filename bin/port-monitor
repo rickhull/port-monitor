@@ -16,7 +16,7 @@ EOF
   exit 1
 end
 
-require 'port_monitor'
+require 'port-monitor'
 
 DEFAULT_DELAY = 2
 
@@ -28,7 +28,7 @@ when 1
   # we just have a host
   port = ARGV.shift || usage("No target port was specified")
 when 2
-  host, port = *splitted 
+  host, port = *splitted
 else
   usage("Could not understand #{host}")
 end
